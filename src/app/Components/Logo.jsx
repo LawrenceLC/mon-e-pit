@@ -1,7 +1,7 @@
 const Logo = () => {
   return (
     <div className="w-16 h-16">
-      <img src={require("../assets/images/random-logo.png")} alt="logo" />
+      <img src='/images/random-logo.png' alt="logo" />
     </div>
   );
 }

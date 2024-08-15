@@ -3,8 +3,7 @@ import React from "react";
 export default function Checkout() {
     return (
         <div>
-            <p>money money money</p>
+            <h1>money money money</h1>
         </div>
     );
 }
-
