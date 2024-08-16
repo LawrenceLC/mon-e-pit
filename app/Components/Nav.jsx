@@ -1,20 +1,22 @@
 "use client";
 
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const NavLinks = () => {
   return (
     <>
-      <NavLink to="/Home">Home</NavLink>
-      <NavLink to="/Checkout">Checkout</NavLink>
+      <Link href="/">Home</Link>
+      <Link href="/checkout">Checkout</Link>
     </>
   );
 };
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  //const windowWidth = window.innerWidth;
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -23,11 +25,16 @@ const Nav = () => {
   return (
     <>
       <nav className="flex w-1/3 justify-end">
-        <div className=" hidden w-full md:flex justify-between">
+        {!isOpen && (
+        <div className=" hidden w-full md:flex justify-evenly">
           <NavLinks />
-        </div>
+        </div>          
+        )}
         <div class="md:hidden">
-          <button onClick={toggleNavbar}>{isOpen ? <X /> : <Menu />}</button>
+          <button onClick={toggleNavbar}>{isOpen ? null : <Menu />}</button>
+        </div>
+        <div class="">
+          <button onClick={toggleNavbar}>{isOpen ? <X /> : null}</button>
         </div>
       </nav>
       {isOpen && (
