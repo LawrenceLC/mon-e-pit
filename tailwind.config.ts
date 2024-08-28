@@ -28,8 +28,11 @@ const config: Config = {
        'Alabaster': '#fafbff',
        'Background': '#161616',
        'White': '#ffffff'
-    }
+    }, 
+    fontFamily: {
+      'DM Sans': ['DM Sans', 'sans-serif'],
+    },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
 };
 export default config;

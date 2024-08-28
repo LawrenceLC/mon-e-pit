@@ -7,7 +7,7 @@ import { useState } from "react";
 const NavLinks = () => {
   return (
     <>
-      <Link href="/">Home</Link>
+      <Link href="/home">Home</Link>
       <Link href="/checkout">Checkout</Link>
     </>
   );
